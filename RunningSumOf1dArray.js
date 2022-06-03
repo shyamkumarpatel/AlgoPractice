@@ -4,7 +4,8 @@
 
 function runningSums(nums) {
     var runningSums = [];
-    if (nums.length <= 1) {
+
+    if (nums.length <= 1 || Array.isArray(nums) == false) {
         return nums;
     } else {
         runningSums.push(nums[0]);
