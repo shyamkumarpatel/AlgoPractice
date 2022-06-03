@@ -15,6 +15,6 @@ function runningSums(nums) {
   }
 }
 
-let nums = [1, 2, 3, 4];
+var nums = [1, 2, 3, 4];
 console.log(nums);
 console.log(runningSums(nums));
