@@ -36,11 +36,9 @@ const expected5 = "";
 function join(arr, separator=", ") {
     var rtStr = "";
     for(var i=0; i < arr.length; i++){
-        if(i == (arr.length-1)){
-            rtStr += arr[i]
-        }
-        else{
-            rtStr += arr[i]+separator;
+        rtStr += arr[i];
+        if(i != (arr.length-1)){
+            rtStr += separator;
         }
     }
     return rtStr;
