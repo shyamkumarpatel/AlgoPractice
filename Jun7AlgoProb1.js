@@ -12,8 +12,8 @@ const expected4 = "";
 
 /**
  * Reverses the given str.
- * - Time: O(?).
- * - Space: O(?).
+ * - Time: O(?).   -->O(n) 
+ * - Space: O(?).  -->O(n)
  * @param {string} str String to be reversed.
  * @returns {string} The given str reversed.
  */

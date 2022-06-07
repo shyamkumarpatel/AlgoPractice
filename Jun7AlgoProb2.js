@@ -27,13 +27,13 @@ const expected5 = "";
 
 /**
  * Converts the given array into a string of items separated by the given separator.
- * - Time: O(?).
- * - Space: O(?).
+ * - Time: O(?).    --> O(2n) --> O(n)
+ * - Space: O(?).   --> O(n)
  * @param {Array<string|number|boolean>} arr The items to be joined as a string.
  * @param {string} separator To separate each item of the given arr.
  * @returns {string} The given array items as a string separated by the given separator.
  */
-function join(arr, separator) {
+function join(arr, separator=", ") {
     var rtStr = "";
     for(var i=0; i < arr.length; i++){
         if(i == (arr.length-1)){
@@ -57,3 +57,6 @@ console.log(expected3);
 
 console.log(join(arr4, separator4));
 console.log(expected4);
+
+console.log(join(arr1));
+console.log(expected1);
