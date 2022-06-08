@@ -1,5 +1,4 @@
-/* 
-  Given in an alumni interview in 2021.
+/*
   String Encode
   You are given a string that may contain sequences of consecutive characters.
   Create a function to shorten a string by including the character,
