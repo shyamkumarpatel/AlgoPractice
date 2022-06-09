@@ -25,26 +25,26 @@ function decodeStr(str) {
     if(str.length < 2) return str;
 
     for(var i = 0; i < str.length; i++){
-        if(str.charCodeAt(i) >= 48  && str.charCodeAt(i) <=57){
-            if(i == (str.length -1)){
+        if(isNaN(str.charAt(i))){
+            charIndex = str.charAt(i);
+        }
+        else{
+            if(i == (str.length-1)){
                 counter += str.charAt(i);
                 for(var j = 0; j < parseInt(counter); j++){
                     rtStr += charIndex;
                 }
             }
-            else if(str.charCodeAt(i+1) >= 48  && str.charCodeAt(i+1) <=57){
-                counter += str.charAt(i);
-            }
-            else{
+            else if(isNaN(str.charAt(i+1))){
                 counter += str.charAt(i);
                 for(var j = 0; j < parseInt(counter); j++){
                     rtStr += charIndex;
                 }
                 counter = '';
             }
-        }
-        else{
-            charIndex = str.charAt(i);
+            else{
+                counter += str.charAt(i);
+            }
         }
     }
 
