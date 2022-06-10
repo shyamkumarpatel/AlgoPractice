@@ -34,7 +34,7 @@ function bookIndex(nums) {
 
     for(var i =0; i < nums.length; i++){
         lastNum.push(nums[i]);         // Push the current index of nums into lastNum arr.
-        if(nums[i]+1 == nums[i+1]){    // Check the current index 
+        if(nums[i]+1 == nums[i+1]){    // Check the current index + 1 to the next element within the lastNum arr.
             lastNum.push(nums[i]);
         }
         else{
