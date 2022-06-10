@@ -20,8 +20,8 @@
   
   /**
    * Converts the given arrays of keys and values into an object.
-   * - Time: O(?).
-   * - Space: O(?).
+   * - Time: O(?).     --> O(N)
+   * - Space: O(?).    --> O(N)
    * @param {Array<string>} keys
    * @param {Array<any>} values
    * @returns {Object} The object with the given keys and values.
