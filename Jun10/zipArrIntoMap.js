@@ -38,8 +38,8 @@
   }
 
 
-  console.log(zipArraysIntoMap(keys1, vals1));
-  console.log(expected1);
+  console.log("Acutal:   ",zipArraysIntoMap(keys1, vals1));
+  console.log("Expected: ", expected1);
 
-  console.log(zipArraysIntoMap(keys2, vals2));
-  console.log(expected2);
+  console.log("Acutal:   ",zipArraysIntoMap(keys2, vals2));
+  console.log("Expected: ",expected2);
