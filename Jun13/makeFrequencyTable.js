@@ -22,8 +22,8 @@ const expected3 = {};
 
 /**
  * Builds a frequency table based on the given array.
- * - Time: O(?).
- * - Space: O(?).
+ * - Time: O(?).  --> O(N)
+ * - Space: O(?). --> O(N)
  * @param {Array<string>} arr
  * @returns {Object<string, number>} A frequency table where the keys are items
  *    from the given arr and the values are the amnt of times that item occurs.
@@ -33,7 +33,7 @@ function makeFrequencyTable(arr) {
 
     for(var i = 0; i < arr.length; i++){
         if(rtObj.hasOwnProperty(arr[i])){
-           rtObj[arr[i]] += 1;
+            rtObj[arr[i]] += 1;
         }
         else{
             rtObj[arr[i]] = 1;
