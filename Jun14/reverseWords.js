@@ -16,16 +16,14 @@ const expected3 = "cba fed ihg";
 /**
  * Reverses the letters in each words in the given space separated
  * string of words. Does NOT reverse the order of the words themselves.
- * - Time: O(?).  --> O(N)
- * - Space: O(?). --> O(N)
+ * - Time: O(?). --> O(N^2)
+ * - Space: O(?). -->  O(N?)
  * @param {string} str Contains space separated words.
  * @returns {string} The given string with each word's letters reversed.
  */
 function reverseWords(str) {
-    let reverseWordArr = str.split(" ").map(word => word.split("").reverse().join(""));
-    return reverseWordArr.join(" ");
-  }
-  
+    return str.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+}
 
 console.log("Acutal:   ",reverseWords(str1));
 console.log("Expected: ", expected1);
