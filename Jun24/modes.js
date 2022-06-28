@@ -38,9 +38,9 @@ function mode(nums) {
     rtArr = [];
 
     //if the nums array is empty or only has 1 number in it, then it's contents are assigned to rtArr.
-    if(nums.length < 2) rtArr = nums;
+   // if(nums.length < 2) rtArr = nums;
     //else we will run through our algorithm
-    else{
+   // else{
         //create to dictionary which will hold the count of occurrence of each distinct number in the nums array.
         new_dict1 = {}
         for (let i = 0; i < nums.length; i++){
@@ -56,14 +56,15 @@ function mode(nums) {
         var isNotSameValue = false;
         for (key in new_dict1){
             if (new_dict1[key] > maxCount) maxCount = new_dict1[key];
-            if (new_dict1[key] != maxCount) isNotSameValue =true;
+            //console.log("For key =",key, "Count =", new_dict1[key], "maxCount = ", maxCount)
+            if (new_dict1[key] != maxCount || nums.length == 1) isNotSameValue =true;
         }
         if(isNotSameValue){
             //looping through the dic, if value of a distinct number is max value, then push that into rtArr
             for (key in new_dict1){
                 if (new_dict1[key] == maxCount) rtArr.push(parseInt(key));
             }
-        }
+    //    }
     }
 
     //return the rtArr
